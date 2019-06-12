@@ -1,46 +1,50 @@
-# rollup-starter-lib
+# TypeScript React Component Starter
+[![TypeScript 3.5](https://img.shields.io/badge/TypeScript%20-3.5-blue.svg)](https://github.com/prettier/prettier)
+[![styled with prettier](https://img.shields.io/badge/styled%20with-Prettier-blue.svg)](https://github.com/prettier/prettier)
+[![linted with tslint](https://img.shields.io/badge/linted%20by-TSLint-brightgreen.svg)](https://palantir.github.io/tslint/)
 
-[![Greenkeeper badge](https://badges.greenkeeper.io/rollup/rollup-starter-lib.svg)](https://greenkeeper.io/)
+Stater kit for TypeScript React Components. Generates JavaScript ready to be published on npm and to be consumed by React.
 
-This repo contains a bare-bones example of how to create a library using Rollup, including importing a module from `node_modules` and converting it from CommonJS.
+ Batteries included. Period.
+- [Prettier](https://prettier.io/) and [TSlint](https://palantir.github.io/tslint/) for formatting and linting
+- [ts-node](https://github.com/TypeStrong/ts-node) for tests execution
 
-We're creating a library called `how-long-till-lunch`, which usefully tells us how long we have to wait until lunch, using the [ms](https://github.com/zeit/ms) package:
+## Clone the repo
+`$ git clone git@github.com:fox1t/typescript-react-component-starter.git {your_project_name}`
 
-```js
-console.log('it will be lunchtime in ' + howLongTillLunch());
-```
+`$ cd {your_project_name}`
 
-## Getting started
+## Remove reference to this starter and re-init package.json
+`$ rm -rf .git && git init && npm init`
 
-Clone this repository and install its dependencies:
+## Install development dependencies
+`$ npm i`
 
-```bash
-git clone https://github.com/rollup/rollup-starter-lib
-cd rollup-starter-lib
-npm install
-```
+## Scripts
+- `npm run build`: build React components to dist directory
+- `npm run dev`: build React components in watch mode
+- `npm test`: run tests in `./test`
 
-`npm run build` builds the library to `dist`, generating three files:
+## Dev Dependencies
 
-* `dist/how-long-till-lunch.cjs.js`
-    A CommonJS bundle, suitable for use in Node.js, that `require`s the external dependency. This corresponds to the `"main"` field in package.json
-* `dist/how-long-till-lunch.esm.js`
-    an ES module bundle, suitable for use in other people's libraries and applications, that `import`s the external dependency. This corresponds to the `"module"` field in package.json
-* `dist/how-long-till-lunch.umd.js`
-    a UMD build, suitable for use in any environment (including the browser, as a `<script>` tag), that includes the external dependency. This corresponds to the `"browser"` field in package.json
+- `cross-env`: sets TS_NODE_PROJECT for running tests with tap/ts-node crossplatform
+- `rimraf`: removes `lib` folder crossplatform
+- `ts-node`: runs tests without compiling
+- `prettier`
+- `tslint`
+- `tslint-config-prettier`: makes tslint work nice with prettier
+- `typescript`
 
-`npm run dev` builds the library, then keeps rebuilding it whenever the source files change using [rollup-watch](https://github.com/rollup/rollup-watch).
+## Spread the word
+If you use this starter, add this badge to your project to help standardising TypeScript React Component develpment.
 
-`npm test` builds the library, then tests it.
+`[![built with typescript-react-component-starter](https://img.shields.io/badge/built%20with-typescript--react--component--starter%20-blue.svg)](https://github.com/fox1t/typescript-react-component-starter)`
 
-## Variations
+[![built with typescript-react-component-starter](https://img.shields.io/badge/built%20with-typescript--react--component--starter%20-blue.svg)](https://github.com/fox1t/typescript-react-component-starter)
 
-* [babel](https://github.com/rollup/rollup-starter-lib/tree/babel) — illustrates writing the source code in ES2015 and transpiling it for older environments with [Babel](https://babeljs.io/)
-* [buble](https://github.com/rollup/rollup-starter-lib/tree/buble) — similar, but using [Bublé](https://buble.surge.sh/) which is a faster alternative with less configuration
-* [TypeScript](https://github.com/rollup/rollup-starter-lib/tree/typescript) — uses [TypeScript](https://www.typescriptlang.org/) for type-safe code and transpiling
-
-
+## Inspired by
+[rollup-starter-lib](https://github.com/rollup/rollup-starter-lib/tree/typescript)
 
 ## License
 
-[MIT](LICENSE).
+MIT
