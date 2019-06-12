@@ -1,0 +1,39 @@
+{
+  "name": "typescript-react-component-starter",
+  "version": "0.1.0",
+  "description": "Put here a description.",
+  "main": "dist/main.js",
+  "module": "dist/esm/main.js",
+  "types": "dist/types/main.d.ts",
+  "author": "Maksim Sinik <maksim@sinik.it>",
+  "license": "MIT",
+  "scripts": {
+    "prebuild": "rm -rf dist",
+    "build": "rollup -c",
+    "dev": "rollup -c -w",
+    "test": "cross-env TS_NODE_PROJECT=./test/tsconfig.json node -r ts-node/register test/test.ts"
+  },
+  "dependencies": {
+    "ms": "^2.0.0"
+  },
+  "devDependencies": {
+    "@types/ms": "0.7.30",
+    "cross-env": "~5.2.0",
+    "rollup": "1.15.1",
+    "rollup-plugin-commonjs": "10.0.0",
+    "rollup-plugin-node-resolve": "5.0.1",
+    "rollup-plugin-peer-deps-external": "~2.2.0",
+    "rollup-plugin-typescript2": "~0.21.1",
+    "ts-node": "8.2.0",
+    "tslib": "1.10.0",
+    "tslint": "~5.17.0",
+    "tslint-config-prettier": "1.18.0",
+    "typescript": "3.5.1"
+  },
+  "files": [
+    "dist"
+  ],
+  "directories": {
+    "test": "test"
+  }
+}
